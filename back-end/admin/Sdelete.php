@@ -1,0 +1,19 @@
+<?php
+$id=$_GET["id"];
+include_once("../connection.php");
+if($conn->connect_error){
+        echo"failed<br>";
+    }
+    else{
+        echo"successful<br>";
+    }
+    $id=$_GET['id'];
+    $cmd="delete from special where D_id=$id";
+    $data=mysqli_query($conn,$cmd);
+    if($data){
+        header('location:special.php');
+}
+else{
+    echo"<br>failed";
+}
+ ?>

@@ -1,0 +1,73 @@
+nav{
+    width: 100%;
+    height: 2rem;
+    background-color: rgba(28, 144, 173, 0.636);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+
+}
+.block{
+    width: 100%;
+
+}
+.head{
+    width: 70%;
+    display: flex;
+}
+.head a{
+    text-decoration: none;
+    color: rgb(234, 229, 229);
+    font-size: 25px;
+    padding: 7px 10px;
+    transition: 0.7s;
+    border:2px solid rgba(255, 250, 250, 0);
+    margin: 10px 15px;
+}
+.head a:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-top: 2px;
+    color: rgb(6, 6, 6);
+}
+.head .active{
+    border-top: 2px solid rgb(255, 255, 255);
+    padding-top: 2px;
+    color: rgb(0, 0, 0);
+}
+.header{
+    margin-top: 1rem;
+}
+.card{
+    overflow: hidden;
+    border-radius: 20px;
+}
+.card-body{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    background: linear-gradient(0deg, #000000, rgb(0 0 0 / 0%));
+}
+.card-text{
+    font-size: 14px;
+    width: 70%;
+}
+.ca{
+    padding: 10px;
+}
+
+.mybtr:hover{ 
+    box-shadow: 1px 1px 13px red;
+}
+.mybtg:hover{ 
+    box-shadow: 1px 1px 13px rgb(4, 213, 32);
+}
+.mybti:hover{ 
+    box-shadow: 1px 1px 13px rgb(9, 225, 225);
+}
+.form{
+    background-color: #fffafa72;
+    border-radius:3px;
+    width: 50%;
+}

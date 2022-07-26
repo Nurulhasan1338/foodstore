@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Meal - login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- CSS only -->
+    <style>
+      body{
+    background-image: url(../../assets/menu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+.login{
+    width: 25%;
+    height: 35em;
+    display: flex;
+    justify-content: center;   
+    align-items: flex-end;
+}
+.login-box{
+    border-radius: 2px;
+    background-color: rgba(240, 248, 255, 0.607);
+    
+} 
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container login">
+            <div class="w-50 login-box border p-4 shadow">
+                <h1 class="text-center py-3 logo"><b>Happy Meal</b></h1>
+                <div class="row">
+                    <div class="col-7 border-end">
+                        <div class="mb-1">
+                            <div id="invalid" style="display:none;color: rgb(230, 48, 48);">invalid admin cridentials</div>
+                          <!-- form start -->
+
+                        <form method="post" id="myForm">
+                          <!-- name -->
+                            <input type="text" class="form-control my-2 p-2" id="name" name="name"  placeholder="Enter name" required>
+                            <!-- phone number -->
+
+                            <input type="number" class="form-control my-2" id="Number" name="phone_number" placeholder="Mobile Number" required>
+                            <!-- check boxes -->
+
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" name="person" type="radio" value="Customer" onclick=hidePassword() id="Customer" checked>
+                                <label class="form-check-label" for="defaultCheck1">
+                                 Normal login
+                                </label>
+                              </div>
+                                <input class="form-check-input" name="person" type="radio" value="admin" id="admin" onclick=askPassword()>
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Admin login
+                                </label>
+                                <input type="password" class="form-control my-2" id="password" name="password" style="visibility: hidden;" value="" placeholder="password">
+
+                                <!-- submit button -->
+                                <button type="submit" class="btn btn-primary" onclick=validate()>Submit</button>
+                              </div>
+                        </form>
+
+                        <!-- form ends -->
+
+                        </div>
+                        <div class="col d-flex flex-column">
+                          <button type="button" class="btn btn-light my-2 w-100 border"> <img src="../../assets/gIco.webp" alt="google" style="width: 30px;"> login with google</button>
+                          <button type="button" class="btn btn-light my-2 w-100 border"><img src="../../assets/meta.webp" alt="google" style="width: 25px;"> login with meta</button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+    </div>
+    <script src="./login.js">
+    </script>
+  </body>
+</html>
